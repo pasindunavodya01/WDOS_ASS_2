@@ -135,35 +135,28 @@ const storedEmailsString = localStorage.getItem('subscribedemails');
 // Retrieve loggedInUserRole from localStorage
 const loggedInUserRole = localStorage.getItem('loggedInUserRole');
 
-// Check if there are any email addresses stored and if the loggedInUserRole is admin
-if (storedEmailsString && loggedInUserRole === 'admin') {
+// Check if there are any email addresses stored
+if (storedEmailsString) {
     // Parse the string into an array of email addresses
     const emailAddresses = JSON.parse(storedEmailsString);
-
-    // Render each email address on the webpage
-    const emailContainer = document.getElementById('email-container');
-    emailAddresses.forEach(email => {
-        const emailParagraph = document.createElement('p');
-        emailParagraph.textContent = email;
-        emailContainer.appendChild(emailParagraph);
-    });
+    
+    // Check if the loggedInUserRole is admin
+    if (loggedInUserRole === 'admin') {
+        // Render each email address on the webpage
+        const emailContainer = document.getElementById('email-container');
+        emailAddresses.forEach(email => {
+            const emailParagraph = document.createElement('p');
+            emailParagraph.textContent = email;
+            emailContainer.appendChild(emailParagraph);
+        });
+    } else {
+        // If the user is not an admin, display a permission message
+        document.getElementById('email-container').innerText = 'You do not have permission to view email addresses.';
+    }
 } else {
-    // If no email addresses are stored or user is not admin, display a message or handle it accordingly
-    document.getElementById('email-container').innerText = 'You do not have permission to view email addresses.';
+    // If no email addresses are stored, display a message accordingly
+    document.getElementById('email-container').innerText = 'No email addresses found in localStorage.';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
