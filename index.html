@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Linking images as favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+<header>
+
+    <!-- Header section containing navigation -->
+    <nav>
+
+    <div class="main" id="totop">
+        
+        <div class="menu">
+
+            <div class="logo">
+                <a href="index.html"><img src="images/attachment_111231802.jpeg" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="2WildLifeIntro.html">Introduction</a></li>
+                <li><a href="3Department.html">Department of Wildlife</a></li>
+                <li><a href="4SriLankanLeopard.html">Sri Lankan Leopard</a></li>
+                <li><a href="5Animals.html">Animals in Sri Lanka</a></li>
+                
+
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+<div id="popupOverlay">
+    <div id="iframeContainer">
+        <h1> &nbsp Content Editor
+        <button style="float: right; margin: 10px;" onclick="closePopup()">Close</button></h1> <br>
+        <iframe id="" src=""></iframe>
+        <iframe id="popupIframe" src="" frameborder="0" style="left: 0px; top: 50px; height: 100%; width: 100%;  position: absolute;" ></iframe>
+    </div>
+</div>
+
+<main>
+      <!-- Main content section -->
+<section class="sec1">
+    
+    <div class="mainimg">
+        <img src="images/leopard.jpg" alt="">
+    </div>
+
+    <div>
+        
+        <div class="imc"></div>  <div class="imt">
+            <h1 id="wildlife-header"></h1>  <p id="wildlife-content"></p>   </div>
+</main>
+
+
+
+<div class="div2">
+  <h1 id="wildlife-title"></h1>
+  <p id="wildlife-description"></p>
+  <ol class="li1" id="wildlife-list"></ol>
+</div>
+
+</section>
+<section class="sec2">
+    <!-- Section 2 with an image, description, and table -->
+
+<div class="div3">
+    <img src="images/drone-flyover-blue-river-rapids-090636303_prevstill.webp" alt="">
+    <div class="blurbc">
+    </div>
+    <div class="lists">
+        <p id="info1"></p>
+
+        <div class="table"> 
+            <table>   
+            <tr>
+                <th>&#x2022;Mammals</th>
+                <th>&#x2022;Reptiles</th>
+                <th>&#x2022;Amphibians</th>
+                <th>&#x2022;Birds</th>
+              </tr>
+              <tr>
+                <td>120 species</td>
+                <td>171 species</td>
+                <td>106 species</td>
+                <td>227 species</td>
+              </tr>
+            </table>
+            
+
+            
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="sec3">
+     <!-- Section 3 with descriptions of different ecosystems -->
+
+<div class="div4">
+    <h1> </h1>
+    <p></p>
+
+    <div class="forests">
+        <p>&#x2022Sri Lanka's forests,</p>
+        <img src="images/forest.jpg" alt="">
+        <p>
+            </p>
+    </div>
+    <div class="water">
+        <p>&#x2022Sri Lanka's coastal waters,</p>
+        <img src="images/sea.jpg" alt="">
+        <p></p>
+    </div>
+    <div class="climate">
+        <p>&#x2022Sri Lanka's tropical climate,</p>
+        <img src="images/Ella_cloudforest.jpg" alt="">
+        <p></p>
+    </div>
+</div>
+</section>
+
+<section class="sec4">
+     <!-- Section 4 with an image and reasons highlighting the importance of Sri Lankan wildlife -->
+<div class="div5">
+    <img src="images/Tea-plantation-Sri-Lanka.webp" alt="">
+    <div class="blbc"></div>
+    <div class="h2">
+    <h2></h2>
+
+        <ul>
+            <p><br><li>Biodiversity Hotspot: <br><p>Sri Lanka is recognized as a biodiversity hotspot, meaning it harbors an exceptionally high number of species, many of which are found nowhere else on Earth. Protecting this biodiversity contributes to global conservation efforts. </p></li>
+            <br><li>Ecosystem Stability:<br><p>Wildlife plays a crucial role in maintaining the balance of ecosystems. Various species contribute to processes like pollination, seed dispersal, and nutrient cycling, ensuring the health and stability of natural environments.</p></li>
+            <br><li>Tourism and Recreation:<br><p>Sri Lanka's diverse wildlife is a significant attraction for ecotourism. National parks and wildlife reserves draw visitors from around the world, contributing to the country's economy and providing employment opportunities.</p></li>
+            <br><li>Cultural and Spiritual Significance:<br><p>Wildlife holds cultural and spiritual importance in Sri Lanka. Many animals are revered in local myths, folklore, and religious beliefs. Conservation efforts often align with cultural practices that emphasize the interconnectedness of humans and nature.</p></li></p>
+        </ul>
+
+    </div>
+</div>
+</section>
+
+ <!-- Go to Top button -->
+    <a href="#totop">
+        <button id="gtpbtn">Go to Top</button>
+    </a>
+    <a id="Login" href="login.html">
+        <button id="login">Login</button>
+    </a>
+    <a  href="">
+        <button id="Edit" style="display: none;" onclick="openPopup()">Edit</button>
+    </a>
+
+ <!-- Footer area -->
+<div class="footer">
+
+    <h2>Subscribe to Our Newsletter</h2>
+    <form id="subscribeForm">
+        <input type="email" id="emailInput" required placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+    <p>&copy; 2023 Wildlife Sri Lanka</p>
+</div>
+
+<!--referance
+Wikipedia. (2020). Wildlife of Sri Lanka. [online] Available at: https://en.wikipedia.org/wiki/Wildlife_of_Sri_Lanka.
+
+‌
+Unit, B. (n.d.). Main Details. [online] www.cbd.int. Available at: https://www.cbd.int/countries/profile/?country=lk#:~:text=Benefits%20derived%20from%20biodiversity%20contribute [Accessed 15 Jan. 2024].
+
+‌Wikipedia. (2022). Natural forests in Sri Lanka. [online] Available at: https://en.wikipedia.org/wiki/Natural_forests_in_Sri_Lanka.
+
+‌Dilmahconservation.org. (2017). All About Animals | Information About Animals in Sri Lanka | Dilmah Conservation. [online] Available at: https://www.dilmahconservation.org/about-animals.
+
+-->
+
+
+</footer>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+  // Check if the user is logged in
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+  if (isLoggedIn) {
+      // Show the edit button
+      document.getElementById("Edit").style.display = 'inline-block';
+      document.getElementById("login").innerText = 'Logout';
+      document.getElementById("Login").href = 'dashboard.html';
+  }
+});
+
+function openPopup() {
+        var popupOverlay = document.getElementById('popupOverlay');
+        var popupIframe = document.getElementById('popupIframe');
+        var webpageURL = "editIndex.html"; // Replace with the URL of the webpage you want to display
+        event.preventDefault();
+        popupIframe.src = webpageURL; // Set the src attribute of the iframe
+
+        // Show the popup overlay
+        popupOverlay.style.display = "block";
+    }
+
+    function closePopup() {
+        var popupOverlay = document.getElementById('popupOverlay');
+
+        // Hide the popup overlay
+        popupOverlay.style.display = "none";
+
+        window.location.href = 'index.html';
+    }
+
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Retrieve the email input value
+    var email = document.getElementById('emailInput').value;
+
+    // Retrieve existing emails from localStorage
+    var existingEmails = localStorage.getItem('subscribedemails');
+
+    // If no existing emails, set the current email as the only value
+    if (!existingEmails) {
+        localStorage.setItem('subscribedemails', JSON.stringify([email])); // Store as array
+    } else {
+        // Parse existing emails as array
+        var emailsArray = JSON.parse(existingEmails);
+        
+        // Add the current email to the array
+        emailsArray.push(email);
+
+        // Store the updated array back to localStorage
+        localStorage.setItem('subscribedemails', JSON.stringify(emailsArray));
+    }
+
+    // Alert that subscription was successful
+    alert('You have successfully subscribed with email: ' + email);
+
+    // Submit the form
+    this.submit();
+});
+
+</script>
+
+<script src="index.js"></script>
+<script src="editer.js"></script>
+</body>
+</html>

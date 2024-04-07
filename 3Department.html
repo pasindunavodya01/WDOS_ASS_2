@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Wildlife</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="main" id="totop">
+            
+            <div class="menu">
+    
+                <div class="logo">
+                    <a href="index.html"><img src="images/attachment_111231802.jpeg" alt=""></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="2WildLifeIntro.html">Introduction</a></li>
+                    <li><a href="3Department.html">Department of Wildlife</a></li>
+                    <li><a href="4SriLankanLeopard.html">Sri Lankan Leopard</a></li>
+                    <li><a href="5Animals.html">Animals in Sri Lanka</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <div id="popupOverlay">
+        <div id="iframeContainer">
+            <h1> &nbsp Content Editor
+            <button style="float: right; margin: 10px;" onclick="closePopup()">Close</button></h1> <br>
+            <iframe id="" src=""></iframe>
+            <iframe id="popupIframe" src="" frameborder="0" style="left: 0px; top: 50px; height: 100%; width: 100%;  position: absolute;" ></iframe>
+        </div>
+    </div>
+    <main>
+        <div class="mainimg">
+            <img src="images/depmain.jpg" alt="">
+        </div>
+    
+    
+        <div>
+                
+            <div class="imc3"></div>
+            <div class="imt3">
+                <h1></h1> <h1 class="tansin"></h1>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="diviii">
+            <h1>.</h1>
+            <p>
+           </p>
+           
+    </div>
+
+        <div class="showc">
+            <h1></h1>
+            <ol>
+
+            </ol>
+            
+        <div class="cards">
+            
+           
+            <div class="cimg">
+                <img src="images/sinharaja3.png" alt="">
+                <p>Sinharaja Rainforest Reserve.</p>
+            </div>
+                <div class="cimg">
+                <img src="images/worlds-end-horton-plains-1.jpg" alt="">
+                <p>Horton Plains National Park.</p>
+            </div>
+                <div class="cimg">
+                <img src="images/cloudy-knuckles-its-heavenreal.jpg" alt="">
+                <p>Knuckles Mountain Range.</p>
+            </div>
+            <div class="cimg">
+                <img src="images/kanneliya.jpg" alt="">
+                <p>Kanneliya-Dediyagala-Nakiyadeniya Forest Complex.</p> 
+            </div>
+            <div class="cimg">
+                <img src="images/minneriya.webp" alt="">
+                <p>Minneriya National Park.</p>
+            </div>
+            <div class="cimg">
+                <img src="images/galoya.jpg" alt="">
+                <p>Gal Oya National Park.</p>
+            </div>
+                <div class="cimg">
+                <img src="images/bundala.jpg" alt="">
+                <p>Bundala National Park.</p>
+            </div>
+                <div class="cimg">
+                <img src="images/muthurajawela.jpg" alt="">
+                <p>Muthurajawela Wetlands.</p>
+            </div>
+                <div class="cimg">
+                <img src="images/Cover-for-Wasgamuwa-National-Park.webp" alt="">
+                <p>Wasgamuwa National Park.</p>
+            </div>
+                <div class="cimg"></div>
+          </div>
+    </div>
+
+    <div class="cont">
+        <h3></h3> 
+            <p></p>
+    </div>
+
+    <iframe id="ifdep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.945747289816!2d79.91723077480938!3d6.897092693102105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1702664983775!5m2!1sen!2slk" " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <a href="#totop">
+        <button id="gtpbtn">Go to Top</button>
+    </a>
+    <a id="Login" href="login.html">
+        <button id="login">Login</button>
+    </a>
+    <a  href="">
+        <button id="Edit" style="display: none;" onclick="openPopup()">Edit</button>
+    </a>
+
+    
+    <div class="footer3">
+        <p>&copy; 2023 Wildlife Sri Lanka</p>
+    </div>  
+<!--referance
+Anon, (n.d.). Department of Wildlife Conservation – We Protect Future! [online] Available at: https://www.dwc.gov.lk/.
+
+Anon, (n.d.). About DWC – Department of Wildlife Conservation. [online] Available at: https://www.dwc.gov.lk/about-the-agency/.
+
+Google Maps. (n.d.). Google Maps. [online] Available at: https://www.google.com/maps/@7.2269889 [Accessed 15 Jan. 2024].
+
+‌
+‌-->
+
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      // Check if the user is logged in
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+      if (isLoggedIn) {
+          // Show the edit button
+          document.getElementById("Edit").style.display = 'inline-block';
+          document.getElementById("login").innerText = 'Logout';
+          document.getElementById("Login").href = 'dashboard.html';
+      }
+    });
+    function openPopup() {
+        var popupOverlay = document.getElementById('popupOverlay');
+        var popupIframe = document.getElementById('popupIframe');
+        var webpageURL = "editDepartment.html"; // Replace with the URL of the webpage you want to display
+        event.preventDefault();
+        popupIframe.src = webpageURL; // Set the src attribute of the iframe
+
+        // Show the popup overlay
+        popupOverlay.style.display = "block";
+    }
+
+    function closePopup() {
+        var popupOverlay = document.getElementById('popupOverlay');
+
+        // Hide the popup overlay
+        popupOverlay.style.display = "none";
+        window.location.href = '3Department.html';
+    }
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+

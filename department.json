@@ -1,0 +1,35 @@
+{
+    "imt3hedding" : "The Department of Wildlife Conservation." , 
+    "imt3p" : "වනජීවී සංරක්ෂණ දෙපාර්තමේන්තුව.\n வனசீவராசிகள் பாதுகாப்புத் திணைக்களம்."
+
+    ,
+    "diviihead" : "The Department of Wildlife Conservation",
+    
+    "diviicont": "The Department of Wildlife Conservation in Sri Lanka is a governmental body tasked with the responsibility of conserving and managing the nation's rich and diverse wildlife.\n\nEstablished to safeguard the natural heritage of the country, the department plays a pivotal role in implementing policies and initiatives aimed at the preservation of ecosystems, protection of endangered species, and the sustainable management of wildlife resources.\n\nWith a mission to strike a balance between conservation and human-wildlife coexistence, the department is committed to ensuring the survival of Sri Lanka's unique flora and fauna for future generations.\n\nThis involves enforcing wildlife laws, conducting research, and actively engaging in habitat preservation efforts.\n\nThe Department of Wildlife Conservation oversees and manages several protected areas that are crucial for the conservation of biodiversity.\n\nThese areas are designated to preserve the natural habitats of numerous plant and animal species, many of which are endemic to Sri Lanka."
+
+    ,
+
+    "areashead" : "Protected areas." ,
+    
+        "locations": [
+          "Sinharaja Rainforest Reserve",
+          "Horton Plains National Park",
+          "Knuckles Mountain Range",
+          "Kanneliya-Dediyagala-Nakiyadeniya Forest Complex",
+          "Minneriya National Park",
+          "Gal Oya National Park",
+          "Bundala National Park",
+          "Muthurajawela Wetlands",
+          "Wasgamuwa National Park"
+        ]
+        ,
+        "conth3" : "CONTACT US:",
+        "contp": "Department of Wildlife Conservation,\n811/A, Jayanthipura,\nBattaramulla, Sri Lanka. \n\nEmail: dg@dwc.gov.lk \nPhone: +94 11 2 888 585 \nFax: +94  11 2  883 355"
+          
+          
+
+      
+      
+      
+      
+}

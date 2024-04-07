@@ -1,0 +1,329 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#popupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 1000; /* make sure it's above everything else */
+}
+/* Style for the iframe container */
+#iframeContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* adjust width as needed */
+    height: 80%; /* adjust height as needed */
+    background-color: white;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#login{
+    position: fixed;
+    top: 20px;
+    padding-right: 15px;
+    right: 10px;
+    padding: 8px ;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #0673e7;
+    font-size: 15px;
+    border: hidden;
+    z-index: +10;
+
+}
+#login:hover{
+    background-color: #0056b3;
+}
+
+#Edit{
+    position: fixed;
+    top: 60px;
+    padding-right: 15px;
+    right: 10px;
+    padding: 8px ;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #47d0c0;
+    font-size: 17px;
+    border: hidden;
+    height: 30px;
+    color: black;
+
+
+}
+#Edit:hover{
+    background-color: #0056b3;
+}
+
+header {
+    width: 100%;
+    background-color: #009688;
+    background-image:url(images/yala42-1894272Yala_Jeep_Safari.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.logo img{
+    border: solid black;
+    border-radius: 40%; 
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width:100px;
+    height: 80px;
+    text-align: center;
+}
+header h1{
+    color: green;
+    font-size: 40px;
+}
+h2{
+    font-size: 40px;
+    color: brown;
+}
+
+p{
+    font-size: 23px;
+    color: rgb(42, 41, 41);
+    padding-left: 20px;
+}
+
+.img1{
+    width: 101%;
+    height: 740px;
+    position: relative;
+    z-index: -2;
+    animation: example1 16s infinite;
+    
+}
+
+
+.img2{
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: -1;
+    height: 854px;
+    animation: example2 16s infinite;
+}
+.img3{
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: -1;
+    height: 854px;
+    animation: example3 16s infinite;
+}
+.img4{
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: -1;
+    height: 854px;
+    animation: example4 16s infinite;
+    
+}
+
+@keyframes example1 {
+    0%   {opacity:1;}
+    25%  {opacity:1;}
+    50%  {opacity:0;}
+    75%  {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @keyframes example2 {
+    0%   {opacity:0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0;}
+    100% {opacity: 0;}
+  }  
+
+  @keyframes example3 {
+    0%   {opacity:0;}
+    25%  {opacity:0;}
+    50%  {opacity:1;}
+    75%  {opacity:1;}
+    100% {opacity:0;}
+  }
+
+  @keyframes example4 {
+    0%   {opacity:0;}
+    25%  {opacity:0;}
+    50%  {opacity:0;}
+    75%  {opacity:1;}
+    85%  {opacity:1;}
+    100% {opacity:0;}
+    
+  }
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    color: brown;
+}
+
+main {
+    padding: 20px;
+}
+
+iframe{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 55px;
+}
+footer p{
+    color: #fff;
+    font-size: 16px;
+}
+
+#wildlife{
+    background-color: aqua;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+#overview{
+    background-color: aqua;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    align-items: center;
+}
+
+#gallery2{
+    display: none;
+}
+
+.image {
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+.image img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+
+#gtpbtn {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: +7;
+}
+
+#gtpbtn:hover {
+    background-color: darkgreen;
+    color: aqua;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        text-align: center; 
+        
+    }
+
+    nav ul li {
+        display:block;
+        margin-right: 25px;
+    }
+    
+
+
+    .mainimg1 img,
+    .mainimg2 img,
+    .mainimg3 img,
+    .mainimg4 img {
+        padding: 0px;
+        margin: 0px;
+        width: 100%; 
+        height: auto;
+        animation: none;
+
+
+    }
+    .logo{
+        display: none;
+    }
+
+    main {
+        padding: 10px; 
+    }
+
+    #map iframe {
+        width: 100%; 
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+    #overview p{
+        font-size: 15px;
+    }
+    #wildlife p{
+        font-size: 15px;
+    }
+
+}

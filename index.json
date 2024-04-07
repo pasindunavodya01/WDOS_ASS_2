@@ -1,0 +1,47 @@
+{  
+  "header": "Sri Lankan Wildlife",
+  "content": "Sri Lanka's wildlife is as varied as the island itself, ranging from elephants and leopards to marine life and a vast number of different birds, and Sri Lanka is now one of the best places in the world to see whales, including the mighty blue whale."
+,
+  "title": "Introduction to Sri Lankan Wildlife",
+  "description": "Sri Lanka, an island nation nestled in the Indian Ocean, is a biodiversity hotspot known for its rich and diverse wildlife. The country's varied ecosystems provide a habitat for a remarkable array of species. Here's a glimpse into the captivating wildlife that graces the landscapes of Sri Lanka.",
+  "wildlifeList": [
+    "Elephants",
+    "Leopards",
+    "Birdlife",
+    "Marine Life",
+    "Reptiles and Amphibians",
+    "Endemic Species",
+    "Rainforests and Biodiversity",
+    "Cultural Significance",
+    "Conservation Efforts"
+  ]
+  ,
+  "forests": "Sri Lanka's coastal waters harbor a diverse and vibrant marine ecosystem, boasting a rich tapestry of sea life. The surrounding seas are home to an array of colorful coral reefs, where a multitude of marine species thrive. These coral ecosystems, found off the coasts of places like Hikkaduwa and Pigeon Island, contribute to the island's significant marine biodiversity. The warm Indian Ocean waters surrounding Sri Lanka are frequented by various species of dolphins and whales, making it a prime location for whale watching. The marine biodiversity includes an assortment of fish species, sea turtles, and crustaceans. Mangrove ecosystems, such as those in Puttalam and Batticaloa Lagoons, provide vital breeding grounds for numerous marine species. Sri Lanka's commitment to marine conservation underscores the importance of preserving this precious marine diversity for future generations."
+  
+    ,
+    "water": "Sri Lanka's coastal waters harbor a diverse and vibrant marine ecosystem, boasting a rich tapestry of sea life. The surrounding seas are home to an array of colorful coral reefs, where a multitude of marine species thrive. These coral ecosystems, found off the coasts of places like Hikkaduwa and Pigeon Island, contribute to the island's significant marine biodiversity. The warm Indian Ocean waters surrounding Sri Lanka are frequented by various species of dolphins and whales, making it a prime location for whale watching. The marine biodiversity includes an assortment of fish species, sea turtles, and crustaceans. Mangrove ecosystems, such as those in Puttalam and Batticaloa Lagoons, provide vital breeding grounds for numerous marine species. Sri Lanka's commitment to marine conservation underscores the importance of preserving this precious marine diversity for future generations."
+
+    ,
+
+    "climate":"Sri Lanka, an island nation in the Indian Ocean, boasts a climate as diverse as its landscapes. The country experiences a tropical climate with distinct wet and dry seasons, influenced by two monsoons. The southwest monsoon, from May to September, brings abundant rainfall to the southwestern regions, including the lush hills and tea plantations. In contrast, the northeast monsoon, from November to February, affects the northern and eastern coasts. Coastal areas enjoy a sun-kissed climate year-round, with temperatures ranging from 27 to 32 degrees Celsius. The central highlands, with cities like Kandy and Nuwara Eliya, offer a refreshing escape with cooler temperatures and occasional mist. Sri Lanka's climate fosters diverse ecosystems, from rainforests to arid zones, providing a picturesque backdrop to the island's rich cultural tapestry and vibrant wildlife."
+     
+  ,
+    "description2": "Sri Lanka is located off the southeast coast of India. Sri Lanka has only recently begun to emerge as a burgeoning ecotourism hotspot. But the wildlife of Sri Lanka is remarkable for an island measuring just 25,332 square miles, boasting an impressively high rate of endemic species (16% of the fauna and 23% of the flowering plants) and Sri Lanka is one of the world’s largest populations of blue whales and sperm whales, Sri Lanka is truly an animal lover’s dream come true.",
+    "wildlifeData": {
+      "Mammals": "120 species",
+      "Reptiles": "171 species",
+      "Amphibians": "106 species",
+      "Birds": "227 species"
+    }
+  
+  ,
+  "div4des":" Sri Lanka is home to diverse and unique ecosystems, and several special areas have been designated to protect its rich wildlife.",
+  "div4cont":"Here are some of the notable wildlife special facts in Sri Lanka:"
+
+  ,
+
+    "h2cont" : "Sri Lankan wildlife is important for several reasons, encompassing ecological, economic, cultural, and scientific aspects. Here are some key reasons highlighting the importance of Sri Lankan wildlife."
+
+}
+
+

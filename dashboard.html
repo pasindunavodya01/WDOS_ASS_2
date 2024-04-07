@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        header {
+            background-color: #080326;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 15px;
+        }
+        .card {
+            background-color: #eae2f3;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card a{
+            text-decoration: none;
+            line-height: 30px;
+}
+
+        h2 {
+            margin-top: 0;
+        }
+        .logout-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .logout-btn:hover {
+            background-color: #c9302c;
+        }
+
+        #word {
+            font-size: 20px;
+            text-decoration: underline;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Main pages</h2>
+            <a href="index.html">Home Page</a> <br>
+            <a href="2WildLifeIntro.html">Wildlife Introduction</a> <br>
+            <a href="3Department.html">Department</a><br>
+            <a href="4SriLankanLeopard.html">Sri Lankan Leopard</a><br>
+            <a href="5Animals.html">Animals</a><br>
+            <a href="6Yala.html">Yala</a> <br>
+            <a href="7Wilpattu.html">Wilpattu</a>
+
+            <canvas id="graph1"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>Login status</h2>
+            <p id="loginStatus">Loged in as : </p>
+            <p id="word"></p>
+
+            
+            <p></p>
+        </div>
+
+        <div class="card">
+
+
+            <h2 >Newsletter subscribed Email Addresses</h2>
+            <div id="email-container"></div>
+            
+
+        </div>
+
+
+        <div class="card">
+            <h2>Tasks</h2>
+            <ul>
+                <li>Site Status = running</li>
+                <li>Errors = null</li>
+                <li>Warnings = null</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        // Retrieve the word from localStorage
+        const storedWord = localStorage.getItem('loggedInUserRole');
+
+        // Check if there's any word stored
+        if (storedWord) {
+            // Render the word on the webpage
+            const wordElement = document.getElementById('word');
+            wordElement.textContent = storedWord;
+        } else {
+            // If no word is stored, display a message
+            document.getElementById('word').innerText = 'No word found in localStorage.';
+        }
+
+
+
+// Retrieve the string of email addresses from localStorage
+const storedEmailsString = localStorage.getItem('subscribedemails');
+
+// Retrieve loggedInUserRole from localStorage
+const loggedInUserRole = localStorage.getItem('loggedInUserRole');
+
+// Check if there are any email addresses stored and if the loggedInUserRole is admin
+if (storedEmailsString && loggedInUserRole === 'admin') {
+    // Parse the string into an array of email addresses
+    const emailAddresses = JSON.parse(storedEmailsString);
+
+    // Render each email address on the webpage
+    const emailContainer = document.getElementById('email-container');
+    emailAddresses.forEach(email => {
+        const emailParagraph = document.createElement('p');
+        emailParagraph.textContent = email;
+        emailContainer.appendChild(emailParagraph);
+    });
+} else {
+    // If no email addresses are stored or user is not admin, display a message or handle it accordingly
+    document.getElementById('email-container').innerText = 'You do not have permission to view email addresses.';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function logout() {
+            alert('Logged out successfully!');
+            window.location.href = 'index.html'
+            localStorage.removeItem('isLoggedIn');
+        }
+
+
+
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

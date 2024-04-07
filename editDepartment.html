@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable JSON Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+    <button id="save-btn">Save Changes</button>
+    <button id="reset-btn">Reset to Default</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tableContainer = document.getElementById('table-container');
+            const saveBtn = document.getElementById('save-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            let editableData;
+
+    // Function to fetch data from local storage
+    function fetchFromLocalStorage() {
+        const storedData = localStorage.getItem('myDataDepartment');
+        if (storedData) {
+            return Promise.resolve(JSON.parse(storedData));
+        } else {
+            // If no data found, set some default data and store it in local storage
+            const defaultData = { key1: 'value1', key2: 'value2' }; // Example default data
+            localStorage.setItem('myDataDepartment', JSON.stringify(defaultData));
+            return Promise.resolve(defaultData);
+        }
+    }
+
+    fetchFromLocalStorage()
+        .then(data => {
+            createTable(data);
+            // Set editableData after data is fetched
+            editableData = data;
+        })
+        .catch(error => {
+            console.error('Error fetching data from local storage:', error);
+        });
+
+            // Function to create and populate the table
+            function createTable(data) {
+                const table = document.createElement('table');
+                const tbody = document.createElement('tbody');
+
+                Object.entries(data).forEach(([key, value]) => {
+                    const tr = document.createElement('tr');
+                    const tdKey = document.createElement('td');
+                    const tdValue = document.createElement('td');
+                    const inputField = document.createElement('input');
+
+                    tdKey.textContent = key;
+                    inputField.value = value;
+
+                    // Add event listener to update the editableData object when input field changes
+                    inputField.addEventListener('input', function() {
+                        editableData[key] = this.value;
+                    });
+
+                    tdValue.appendChild(inputField);
+                    tr.appendChild(tdKey);
+                    tr.appendChild(tdValue);
+                    tbody.appendChild(tr);
+                });
+
+                table.appendChild(tbody);
+                tableContainer.appendChild(table);
+            }
+
+          // Event listener for saving changes to local storage
+    saveBtn.addEventListener('click', function() {
+        // Save the edited data to local storage
+        localStorage.setItem('myDataDepartment', JSON.stringify(editableData));
+        alert('Changes saved to local storage.');
+    });
+
+    // Event listener for resetting to default values
+    resetBtn.addEventListener('click', function() {
+        fetch('department.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('myDataDepartment', JSON.stringify(data));
+                editableData = data;
+                tableContainer.innerHTML = ''; // Clear the table container
+                createTable(data);
+                alert('Data reset to default values from department.json.');
+            })
+            .catch(error => {
+                console.error('Error fetching data from department.json:', error);
+                alert('Error resetting data. Please try again later.');
+            });
+    });
+});
+
+    </script>
+</body>
+</html>
