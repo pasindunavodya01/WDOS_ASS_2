@@ -163,6 +163,11 @@
 <div class="bg1n2"></div>
 <footer>
     <div class="footer-lep">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscribeForm">
+            <input type="email" id="emailInput" required placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
         <p>&copy; 2023 Wildlife Sri Lanka</p>
     </div>
     <!--referance
@@ -218,6 +223,37 @@ Wikipedia. (2021). Sri Lankan leopard. [online] Available at: https://en.wikiped
         popupOverlay.style.display = "none";
         window.location.href = '4SriLankanLeopard.html';
     }
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Retrieve the email input value
+    var email = document.getElementById('emailInput').value;
+
+    // Retrieve existing emails from localStorage
+    var existingEmails = localStorage.getItem('subscribedemails');
+
+    // If no existing emails, set the current email as the only value
+    if (!existingEmails) {
+        localStorage.setItem('subscribedemails', JSON.stringify([email])); // Store as array
+    } else {
+        // Parse existing emails as array
+        var emailsArray = JSON.parse(existingEmails);
+        
+        // Add the current email to the array
+        emailsArray.push(email);
+
+        // Store the updated array back to localStorage
+        localStorage.setItem('subscribedemails', JSON.stringify(emailsArray));
+    }
+
+    // Alert that subscription was successful
+    alert('You have successfully subscribed with email: ' + email);
+
+    // Submit the form
+    this.submit();
+});
+
     </script>
 <script src="index.js"></script>
 </body>

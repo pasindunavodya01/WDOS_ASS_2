@@ -202,7 +202,13 @@
     </main>
 
     <footer>
+        
         <div class="footer-ani">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscribeForm">
+                <input type="email" id="emailInput" required placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
             <p>&copy; 2023 Wildlife Sri Lanka</p>
         </div>
         
@@ -257,6 +263,36 @@ AZ Animals. (n.d.). Animals in Sri Lanka. [online] Available at: https://a-z-ani
         popupOverlay.style.display = "none";
         window.location.href = '5Animals.html';
     }
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Retrieve the email input value
+    var email = document.getElementById('emailInput').value;
+
+    // Retrieve existing emails from localStorage
+    var existingEmails = localStorage.getItem('subscribedemails');
+
+    // If no existing emails, set the current email as the only value
+    if (!existingEmails) {
+        localStorage.setItem('subscribedemails', JSON.stringify([email])); // Store as array
+    } else {
+        // Parse existing emails as array
+        var emailsArray = JSON.parse(existingEmails);
+        
+        // Add the current email to the array
+        emailsArray.push(email);
+
+        // Store the updated array back to localStorage
+        localStorage.setItem('subscribedemails', JSON.stringify(emailsArray));
+    }
+
+    // Alert that subscription was successful
+    alert('You have successfully subscribed with email: ' + email);
+
+    // Submit the form
+    this.submit();
+});
         </script>
   <script src="index.js"></script>  
 </body>
