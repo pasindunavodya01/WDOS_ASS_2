@@ -207,7 +207,7 @@ footer {
     padding: 10px;
     height: 120px;
 }
-footer p,h2{
+footer p,footer h2{
     color: #fff;
     font-size: 16px;
 }
